@@ -14,7 +14,8 @@ TEST(TPTests, StopWordsFileRead) {
 	std::string stop_words = "../resources/assets/stop_words.txt";
 
 	txtpar.get_stop_words(stop_words);
-	ASSERT_TRUE(txtpar.stop_words.size() > 1);
+	println("Size Of File: {}", txtpar.stop_words.size());
+	ASSERT_TRUE(txtpar.stop_words.size() == 851);
 
 }
 

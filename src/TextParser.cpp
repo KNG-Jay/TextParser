@@ -7,11 +7,6 @@
 
 
 #include "../include/TextParser.hpp"
-#include <exception>
-#include <fstream>
-#include <iostream>
-#include <vector>
-#include <string>
 
 using namespace std;
 

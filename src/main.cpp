@@ -6,13 +6,15 @@
  */
 
 
-#include <iostream>
 #include "../config.h.in"
+#include "../src/TextParser.cpp"
 
 
 int main(int argc, char **argv) {
-	std::cout << "Hello World" << std::endl;
 	//std::cout << "Version " << TextParser_VERSION_MAJOR << "." << TextParser_VERSION_MINOR << std::endl;
+
+	
+
 	return 0;
 }
 
