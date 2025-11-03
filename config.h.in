@@ -1,0 +1,2 @@
+#define TextParser_VERSION_MAJOR @TextParser_VERSION_MAJOR@
+#define TextParser_VERSION_MINOR @TextParser_VERSION_MINOR@

@@ -1,0 +1,9 @@
+.vscode
+.settings
+build/
+Testing/
+vcpkg_installed
+.project
+.cproject
+.clangd
+.clang-format
