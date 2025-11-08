@@ -7,6 +7,11 @@
 
 
 #include "../include/TextParser.hpp"
+#include <algorithm>
+#include <cctype>
+#include <sstream>
+#include <stdexcept>
+#include <unordered_set>
 #include <vector>
 
 using namespace std;
@@ -21,7 +26,7 @@ TextParser::TextParser(vector<string> words_to_parse, vector<string> file_names)
 TextParser::~TextParser() {}
 
 
-void TextParser::get_stop_words(string stp_wrd_filename) {
+void TextParser::get_stop_words(const string& stp_wrd_filename) {
 	try {
 		ifstream file(stp_wrd_filename);
 		string str;
@@ -30,7 +35,7 @@ void TextParser::get_stop_words(string stp_wrd_filename) {
 			cout << "Failed To Open " << stp_wrd_filename << endl;
 		else {
 			while (getline(file, str)) {
-				TextParser::stop_words.push_back(str);
+				stop_words.push_back(str);
 			}
 		
 			file.close();
@@ -41,6 +46,33 @@ void TextParser::get_stop_words(string stp_wrd_filename) {
 }
 
 
-vector<string> tokenize_document(const string& filepath, const vector<string>& stop_words) {
-	
+vector<string> TextParser::tokenize_document(const string& filepath) {
+	unordered_set<string> stop_set(stop_words.begin(), stop_words.end());
+	vector<string> tokens;
+
+	ifstream file(filepath);
+	if (!file) {
+		throw runtime_error("Cannot Open File: " + filepath);
+	}
+
+	string line;
+	while (getline(file, line)) {
+		istringstream lineStream(line);
+		string word;
+
+		while (lineStream >> word) {
+			word.erase(remove_if(word.begin(), word.end(), ::ispunct), word.end());
+			transform(word.begin(), word.end(), word.begin(), ::tolower);
+
+			if (!stop_set.count(word) && !word.empty()) {
+				tokens.push_back(word);
+			}
+		}
+	}
+
+	return tokens;
+}
+
+vector<string> TextParser::stem_roots(vector<string> tokens_vec) {
+
 }

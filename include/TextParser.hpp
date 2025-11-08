@@ -35,13 +35,12 @@ public:
 	vector<string> words_to_parse;
 	vector<string> file_names;
 
-	void get_stop_words(string stp_wrd_filename);
-	// TOKENIZE DOCUMENT, MINUS "STOP WORDS"
-	vector<string> tokenize_document(const string& filepath, const vector<string>& stop_words);
+	void get_stop_words(const string& stp_wrd_filename);
+	vector<string> tokenize_document(const string& filepath);
 	// STEM ROOT OF WORDS
-	vector<string> stem_roots(vector<string> token_vec);
+	vector<string> stem_roots(vector<string> tokens_vec);
 	// ADD REFERENCE TO WHERE WORD IS FIRST FOUND, PLUS FREQUENCY
-	void process_request(vector<string> words_to_parse, vector<string> file_names);
+	void process_request(const vector<string>& words_to_parse, const vector<string>& file_names);
 
 private:
 
