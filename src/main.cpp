@@ -14,6 +14,7 @@ int main(int argc, char **argv) {
 	//std::cout << "Version " << TextParser_VERSION_MAJOR << "." << TextParser_VERSION_MINOR << std::endl;
 
 	
+	
 
 	return 0;
 }

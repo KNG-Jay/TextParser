@@ -7,15 +7,16 @@
 
 
 #include "../include/TextParser.hpp"
+#include <vector>
 
 using namespace std;
 
 
 TextParser::TextParser() {}
 
-TextParser::TextParser(vector<string> words_to_parse, vector<string> files_to_parse) :
+TextParser::TextParser(vector<string> words_to_parse, vector<string> file_names) :
 	words_to_parse(words_to_parse),
-	files_to_parse(files_to_parse) {}
+	file_names(file_names) {}
 
 TextParser::~TextParser() {}
 
@@ -39,3 +40,7 @@ void TextParser::get_stop_words(string stp_wrd_filename) {
 	}
 }
 
+
+vector<string> tokenize_document(const string& filepath, const vector<string>& stop_words) {
+	
+}
