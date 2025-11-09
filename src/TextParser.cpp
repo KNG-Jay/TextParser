@@ -12,11 +12,6 @@ using namespace std;
 
 
 TextParser::TextParser() {}
-
-TextParser::TextParser(vector<string> words_to_parse, vector<string> file_names) :
-	words_to_parse(words_to_parse),
-	file_names(file_names) {}
-
 TextParser::~TextParser() {}
 
 
@@ -69,7 +64,7 @@ vector<string> TextParser::tokenize_document(const string& filepath) {
 	return tokens;
 }
 
-string root_word(const string& str) {
+string get_root_word(const string& str) {
 	stemming::english_stem<> stemmer;
 	wstring wstr(str.begin(), str.end());
 
@@ -83,11 +78,34 @@ vector<string> TextParser::stem_tokens(const vector<string>& tokens_vec) {
 	vector<string> root_words;
 	root_words.reserve(tokens_vec.size());
 
-	ranges::transform(tokens_vec, back_inserter(root_words), root_word);
+	ranges::transform(tokens_vec, back_inserter(root_words), get_root_word);
+
+	main_token_set.insert(root_words.begin(), root_words.end());
 
 	return root_words;
 }
 
-void TextParser::get_info() {
+void TextParser::process_request(const vector<string>& words_to_parse, const vector<string>& file_names) {
+	string stp_wrds_file = "../resources/assets/stop_words.txt";
+	unordered_map<string, vector<string>> tokens;
+	regex pattern(".*?/|\\..*");
 
+	get_stop_words(stp_wrds_file);
+
+	for (const auto& str : file_names) {
+    	string result = std::regex_replace(str, pattern, "");
+
+		tokens[result] = stem_tokens(tokenize_document(str));
+	}
+
+	for (const auto& word : words_to_parse) {
+		for (const auto& file : file_names) {
+			string result = std::regex_replace(file, pattern, "");
+			int word_count = std::count(tokens[result].begin(), tokens[result].end(), word);
+
+			inv_index[word][result] = word_count;
+		}
+	}
+
+	println("Request Processed Successfully!");
 }
