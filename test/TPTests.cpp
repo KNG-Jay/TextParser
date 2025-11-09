@@ -9,7 +9,7 @@
 #include <gtest/gtest.h>
 #include "../include/TextParser.hpp"
 
-TEST(TPTests, StopWordsFileRead) {
+TEST(TPTests, StopWordsRead) {
 	TextParser txtpar = TextParser();
 	const std::string stop_words = "../resources/assets/stop_words.txt";
 
@@ -25,12 +25,34 @@ TEST(TPTests, DocumentTokenized) {
 	std::string stop_words = "../resources/assets/stop_words.txt";
 	txtpar.file_names.push_back("../resources/assets/UK_Infantry_Training_1905.txt.utf-8");
 
+	vector<string> raw_tokens = txtpar.tokenize_document(txtpar.file_names.front());
+	println("Number Of Raw Tokens: {}", raw_tokens.size());
+
 	txtpar.get_stop_words(stop_words);
 
 	vector<string> tokens = txtpar.tokenize_document(txtpar.file_names.front());
-	println("Number Of Tokens In: {}", tokens.size());
+	println("Number Of Processed Tokens: {}", tokens.size());
 
-	ASSERT_TRUE(tokens.size() == 62646);
+	ASSERT_EQ(tokens.size(), 27553);
+
+}
+
+TEST(TPTests, TokensRooted) {
+	TextParser txtpar = TextParser();
+	std::string stop_words = "../resources/assets/stop_words.txt";
+	txtpar.file_names.push_back("../resources/assets/UK_Infantry_Training_1905.txt.utf-8");
+
+	txtpar.get_stop_words(stop_words);
+
+	vector<string> tokens = txtpar.tokenize_document(txtpar.file_names.front());
+
+	vector<string> rooted_tokens = txtpar.stem_tokens(tokens);
+
+	println("tokens[5] == \"training\"");
+	ASSERT_EQ(tokens[5], "training");
+	ASSERT_EQ(rooted_tokens.size(), 27553);
+	println("rooted_tokens[5] == \"train\"");
+	ASSERT_EQ(rooted_tokens[5], "train");
 
 }
 

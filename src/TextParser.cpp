@@ -7,6 +7,7 @@
 
 
 #include "../include/TextParser.hpp"
+#include "english_stem.h"
 
 using namespace std;
 
@@ -25,20 +26,22 @@ void TextParser::get_stop_words(const string& stp_wrd_filename) {
 		ifstream file(stp_wrd_filename);
 		string str;
 	
-		if (!file.is_open())
-			cout << "Failed To Open " << stp_wrd_filename << endl;
-		else {
-			while (getline(file, str)) {
-				stop_words.push_back(str);
-			}
-		
-			file.close();
-		}
+		if (!file.is_open()) {
+            cout << "Failed To Open " << stp_wrd_filename << endl;
+            return;
+        }
+
+        while (getline(file, str)) {
+            str.erase(remove_if(str.begin(), str.end(), ::isspace), str.end());
+            transform(str.begin(), str.end(), str.begin(), ::tolower);
+            stop_words.push_back(str);
+        }
+
+        file.close();
 	} catch (const exception& e) {
 		cerr << "ERROR: " << e.what() << endl;
 	}
 }
-
 
 vector<string> TextParser::tokenize_document(const string& filepath) {
 	unordered_set<string> stop_set(stop_words.begin(), stop_words.end());
@@ -67,16 +70,27 @@ vector<string> TextParser::tokenize_document(const string& filepath) {
 	return tokens;
 }
 
-string rootWord(const string& str) {
-		auto pos = str.find(' ');
-		return (pos == string::npos) ? str : str.substr(0, pos);
+string root_word(const string& str) {
+	stemming::english_stem<> stemmer;
+	wstring wstr(str.begin(), str.end());
+
+	stemmer(wstr);
+	string root_word(wstr.begin(), wstr.end());
+
+	return root_word;
+	//auto pos = wstr.find(' ');
+	//return (pos == string::npos) ? str : str.substr(0, pos);
 }
 
 vector<string> TextParser::stem_tokens(const vector<string>& tokens_vec) {
 	vector<string> root_words;
 	root_words.reserve(tokens_vec.size());
 
-	ranges::transform(tokens_vec, back_inserter(root_words), rootWord);
+	ranges::transform(tokens_vec, back_inserter(root_words), root_word);
 
 	return root_words;
+}
+
+void TextParser::get_info() {
+
 }
