@@ -7,7 +7,6 @@
 
 
 #include "../include/TextParser.hpp"
-#include "english_stem.h"
 
 using namespace std;
 
@@ -78,8 +77,6 @@ string root_word(const string& str) {
 	string root_word(wstr.begin(), wstr.end());
 
 	return root_word;
-	//auto pos = wstr.find(' ');
-	//return (pos == string::npos) ? str : str.substr(0, pos);
 }
 
 vector<string> TextParser::stem_tokens(const vector<string>& tokens_vec) {
