@@ -1,0 +1,14 @@
+# Target labels
+ osl-populate
+# Source files and their labels
+/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/CMakeFiles/osl-populate
+/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/CMakeFiles/osl-populate.rule
+/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/CMakeFiles/osl-populate-complete.rule
+/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/osl-populate-prefix/src/osl-populate-stamp/osl-populate-build.rule
+/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/osl-populate-prefix/src/osl-populate-stamp/osl-populate-configure.rule
+/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/osl-populate-prefix/src/osl-populate-stamp/osl-populate-download.rule
+/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/osl-populate-prefix/src/osl-populate-stamp/osl-populate-install.rule
+/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/osl-populate-prefix/src/osl-populate-stamp/osl-populate-mkdir.rule
+/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/osl-populate-prefix/src/osl-populate-stamp/osl-populate-patch.rule
+/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/osl-populate-prefix/src/osl-populate-stamp/osl-populate-test.rule
+/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/osl-populate-prefix/src/osl-populate-stamp/osl-populate-update.rule

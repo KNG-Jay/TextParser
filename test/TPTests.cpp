@@ -17,7 +17,7 @@ TEST(TPTests, StopWordsFileRead) {
 	println("Size Of Stop-Words: {}", txtpar.stop_words.size());
 
 	ASSERT_TRUE(txtpar.stop_words.size() == 851);
-
+	
 }
 
 TEST(TPTests, DocumentTokenized) {

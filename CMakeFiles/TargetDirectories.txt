@@ -1,0 +1,5 @@
+/home/kng/cppProjects/google_edu/TextParser/CMakeFiles/TextParser.dir
+/home/kng/cppProjects/google_edu/TextParser/CMakeFiles/runUnitTests.dir
+/home/kng/cppProjects/google_edu/TextParser/CMakeFiles/test.dir
+/home/kng/cppProjects/google_edu/TextParser/CMakeFiles/edit_cache.dir
+/home/kng/cppProjects/google_edu/TextParser/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/kng/cppProjects/google_edu/TextParser",
+  "command": "clang++ -DGTEST_LINKED_AS_SHARED_LIBRARY=1 -I/home/kng/cppProjects/google_edu/TextParser -I/home/kng/cppProjects/google_edu/TextParser/_deps/osl-src/src -I/home/kng/cppProjects/google_edu/TextParser/include -std=gnu++23 -o CMakeFiles/TextParser.dir/src/main.cpp.o -c /home/kng/cppProjects/google_edu/TextParser/src/main.cpp",
+  "file": "/home/kng/cppProjects/google_edu/TextParser/src/main.cpp",
+  "output": "CMakeFiles/TextParser.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/kng/cppProjects/google_edu/TextParser",
+  "command": "clang++ -DGTEST_LINKED_AS_SHARED_LIBRARY=1 -I/home/kng/cppProjects/google_edu/TextParser/_deps/osl-src/src -std=gnu++23 -o CMakeFiles/runUnitTests.dir/test/TPTests.cpp.o -c /home/kng/cppProjects/google_edu/TextParser/test/TPTests.cpp",
+  "file": "/home/kng/cppProjects/google_edu/TextParser/test/TPTests.cpp",
+  "output": "CMakeFiles/runUnitTests.dir/test/TPTests.cpp.o"
+},
+{
+  "directory": "/home/kng/cppProjects/google_edu/TextParser",
+  "command": "clang++ -DGTEST_LINKED_AS_SHARED_LIBRARY=1 -I/home/kng/cppProjects/google_edu/TextParser/_deps/osl-src/src -std=gnu++23 -o CMakeFiles/runUnitTests.dir/src/TextParser.cpp.o -c /home/kng/cppProjects/google_edu/TextParser/src/TextParser.cpp",
+  "file": "/home/kng/cppProjects/google_edu/TextParser/src/TextParser.cpp",
+  "output": "CMakeFiles/runUnitTests.dir/src/TextParser.cpp.o"
+}
+]

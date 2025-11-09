@@ -10,11 +10,14 @@
 #include "../src/TextParser.cpp"
 
 
+void run_UI() {
+
+}
+
 int main(int argc, char **argv) {
 	//std::cout << "Version " << TextParser_VERSION_MAJOR << "." << TextParser_VERSION_MINOR << std::endl;
 
-	
-	
+	run_UI();
 
 	return 0;
 }

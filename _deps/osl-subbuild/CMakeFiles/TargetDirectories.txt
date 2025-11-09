@@ -1,0 +1,3 @@
+/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/CMakeFiles/osl-populate.dir
+/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/CMakeFiles/edit_cache.dir
+/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/CMakeFiles/rebuild_cache.dir

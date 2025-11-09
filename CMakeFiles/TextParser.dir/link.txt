@@ -1,0 +1,1 @@
+clang++ -Wl,--dependency-file=CMakeFiles/TextParser.dir/link.d CMakeFiles/TextParser.dir/src/main.cpp.o -o TextParser  /usr/lib/libgtest_main.so.1.17.0 /usr/lib/libgmock_main.so.1.17.0 /usr/lib/libgmock.so.1.17.0 /usr/lib/libgtest.so.1.17.0

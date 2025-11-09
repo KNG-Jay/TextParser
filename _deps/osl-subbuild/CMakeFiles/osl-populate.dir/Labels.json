@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/CMakeFiles/osl-populate"
+		},
+		{
+			"file" : "/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/CMakeFiles/osl-populate.rule"
+		},
+		{
+			"file" : "/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/CMakeFiles/osl-populate-complete.rule"
+		},
+		{
+			"file" : "/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/osl-populate-prefix/src/osl-populate-stamp/osl-populate-build.rule"
+		},
+		{
+			"file" : "/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/osl-populate-prefix/src/osl-populate-stamp/osl-populate-configure.rule"
+		},
+		{
+			"file" : "/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/osl-populate-prefix/src/osl-populate-stamp/osl-populate-download.rule"
+		},
+		{
+			"file" : "/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/osl-populate-prefix/src/osl-populate-stamp/osl-populate-install.rule"
+		},
+		{
+			"file" : "/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/osl-populate-prefix/src/osl-populate-stamp/osl-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/osl-populate-prefix/src/osl-populate-stamp/osl-populate-patch.rule"
+		},
+		{
+			"file" : "/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/osl-populate-prefix/src/osl-populate-stamp/osl-populate-test.rule"
+		},
+		{
+			"file" : "/home/kng/cppProjects/google_edu/TextParser/_deps/osl-subbuild/osl-populate-prefix/src/osl-populate-stamp/osl-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"osl-populate"
+		],
+		"name" : "osl-populate"
+	}
+}

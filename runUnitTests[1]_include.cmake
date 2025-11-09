@@ -1,0 +1,5 @@
+if(EXISTS "/home/kng/cppProjects/google_edu/TextParser/runUnitTests[1]_tests.cmake")
+  include("/home/kng/cppProjects/google_edu/TextParser/runUnitTests[1]_tests.cmake")
+else()
+  add_test(runUnitTests_NOT_BUILT runUnitTests_NOT_BUILT)
+endif()

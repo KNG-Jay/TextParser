@@ -19,6 +19,7 @@
 #include <vector>
 #include <unordered_map>
 #include <unordered_set>
+#include <english_stem.h>
 
 using namespace std;
 
@@ -37,8 +38,7 @@ public:
 
 	void get_stop_words(const string& stp_wrd_filename);
 	vector<string> tokenize_document(const string& filepath);
-	// STEM ROOT OF WORDS
-	vector<string> stem_roots(vector<string> tokens_vec);
+	vector<string> stem_tokens(const vector<string>& tokens_vec);
 	// ADD REFERENCE TO WHERE WORD IS FIRST FOUND, PLUS FREQUENCY
 	void process_request(const vector<string>& words_to_parse, const vector<string>& file_names);
 

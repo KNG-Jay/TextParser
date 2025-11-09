@@ -7,12 +7,6 @@
 
 
 #include "../include/TextParser.hpp"
-#include <algorithm>
-#include <cctype>
-#include <sstream>
-#include <stdexcept>
-#include <unordered_set>
-#include <vector>
 
 using namespace std;
 
@@ -73,6 +67,16 @@ vector<string> TextParser::tokenize_document(const string& filepath) {
 	return tokens;
 }
 
-vector<string> TextParser::stem_roots(vector<string> tokens_vec) {
+string rootWord(const string& str) {
+		auto pos = str.find(' ');
+		return (pos == string::npos) ? str : str.substr(0, pos);
+}
 
+vector<string> TextParser::stem_tokens(const vector<string>& tokens_vec) {
+	vector<string> root_words;
+	root_words.reserve(tokens_vec.size());
+
+	ranges::transform(tokens_vec, back_inserter(root_words), rootWord);
+
+	return root_words;
 }
