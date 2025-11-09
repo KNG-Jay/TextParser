@@ -115,5 +115,16 @@ void TextParser::process_request(const vector<string>& words_to_parse, const vec
 		}
 	}
 
-	println("Request Processed Successfully!");
+	println("\n\nRequest Processed Successfully!\n\n");
+}
+
+void TextParser::display_results() {
+	println("Results Of Query:\n");
+	for (const auto& word : inv_index) {
+		println("\tEntries For {}:", word.first);
+		for (const auto& ent : inv_index[word.first]) {
+			println("\t\tFile: {}\tCount: {}", ent.first, ent.second);
+		}
+	}
+	println("\n");
 }

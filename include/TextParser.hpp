@@ -30,6 +30,7 @@ public:
 	vector<string> tokenize_document(const string& filepath);
 	vector<string> stem_tokens(const vector<string>& tokens_vec);
 	void process_request(const vector<string>& words_to_parse, const vector<string>& file_names);
+	void display_results();
 
 private:
 
