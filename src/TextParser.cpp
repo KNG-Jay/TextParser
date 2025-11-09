@@ -7,6 +7,13 @@
 
 
 #include "../include/TextParser.hpp"
+#include <fstream>
+#include <iostream>
+#include <sstream>
+#include <stdexcept>
+#include <print>
+#include <algorithm>
+#include <regex>
 
 using namespace std;
 

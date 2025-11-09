@@ -9,13 +9,6 @@
 #define INCLUDE_TEXTPARSER_HPP_
 
 
-#include <fstream>
-#include <iostream>
-#include <sstream>
-#include <stdexcept>
-#include <print>
-#include <algorithm>
-#include <regex>
 #include <string>
 #include <vector>
 #include <unordered_map>

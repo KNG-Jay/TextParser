@@ -8,6 +8,7 @@
 
 #include <gtest/gtest.h>
 #include "../include/TextParser.hpp"
+#include <print>
 
 TEST(TPTests, StopWordsRead) {
 	TextParser txtpar = TextParser();
